@@ -146,22 +146,22 @@ use filter to return a new array containing only the objects representing uncomp
 // Given an array of produce objects, use the filter method to create a new 
 // array containing only the ‘Fruit’ type products that have a quantity less than 10.
 
-const produce = [
-  { name: 'Apple', type: 'Fruit', quantity: 10 },
-  { name: 'Carrot', type: 'Vegetable', quantity: 20 },
-  { name: 'Orange', type: 'Fruit', quantity: 5 },
-  { name: 'Celery', type: 'Vegetable', quantity: 15 },
-  { name: 'Banana', type: 'Fruit', quantity: 2 },
-  { name: 'Spinach', type: 'Vegetable', quantity: 30 },
-  { name: 'Grapes', type: 'Fruit', quantity: 8 },
-  { name: 'Lettuce', type: 'Vegetable', quantity: 5 },
-];
+// const produce = [
+//   { name: 'Apple', type: 'Fruit', quantity: 10 },
+//   { name: 'Carrot', type: 'Vegetable', quantity: 20 },
+//   { name: 'Orange', type: 'Fruit', quantity: 5 },
+//   { name: 'Celery', type: 'Vegetable', quantity: 15 },
+//   { name: 'Banana', type: 'Fruit', quantity: 2 },
+//   { name: 'Spinach', type: 'Vegetable', quantity: 30 },
+//   { name: 'Grapes', type: 'Fruit', quantity: 8 },
+//   { name: 'Lettuce', type: 'Vegetable', quantity: 5 },
+// ];
 
-const quantity = produce.filter(produce => produce.quantity < 10 && produce.type == 'Fruit'); 
+// const quantity = produce.filter(produce => produce.quantity < 10 && produce.type == 'Fruit'); 
     
     
 
-console.log(quantity)
+// console.log(quantity)
 
 //Expected Output:
 /*
@@ -178,7 +178,14 @@ console.log(quantity)
 //use array destructuring to assign these values to individual variables l, w, and h.
 //Log the variables to verify and use them to calculate and log the volume of the box.
 
-// let dimensions = [30, 50, 10];
+//  let dimensions = [30, 50, 10];
+
+//  const [l, w, h] = dimensions 
+// const volume = l * w * h;
+ 
+ 
+
+//  console.log(`Length: ${l}, Width: ${w}, Height: ${h}, The volume is ${volume}.`);
 
 
 
@@ -196,8 +203,11 @@ console.log(quantity)
 //     english: 85
 //   }
 // };
-// ​
-//your code here
+// // ​
+// //your code here
+// const {firstName, lastName,grades: {math, science, english}} = student;
+// const average = (math + science + english)/ 3;
+// console.log(`${firstName} ${lastName}'s average grade is ${average}.`)
 
 //Expected output
 //"Alex Lee's average grade is 85."
@@ -223,8 +233,17 @@ console.log(quantity)
 //object destructuring to extract appName, port, encryption, apiKey, username, 
 //and password into variables.
 
-// let config = {
-//   //your code here
-// }
+ let config = {
+    appName: 'Cookies',
+    port: 8080,
+    security: {
+        encryption: 'AES-256',
+        apiKey: 'APIKey'
+  },
+    credentials: {
+      username: 'Kenpachi',
+      password: 'PassForce'
+  }
+};//your code here
 // ​
-//your code here
+const { appName, port, security: { encryption, apiKey }, credentials: { username, password } } = config;//your code here
